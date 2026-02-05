@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements - GymFit</title>
+    <link rel="stylesheet" href="../assets/global.css">
+    <link rel="stylesheet" href="../admin/admin.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">💪 GymFit</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="../workout-diet/workouts.html">Workouts</a></li>
+            <li><a href="../workout-diet/diet.html">Diet Plans</a></li>
+            <li><a href="announcements.html">Announcements</a></li>
+            <li><a href="../payments/membership.html">Membership</a></li>
+            <li><a href="../payments/payment.html">Payments</a></li>
+        </ul>
+        <div class="user-info">
+            <span id="userNameDisplay">User</span>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container fade-in" id="app">
+        <div class="announcements-container">
+            <div class="page-header">
+                <h1>📢 Announcements</h1>
+                <p>Stay updated with the latest gym news and information</p>
+            </div>
+            <div id="announcementsList" class="announcements-list"></div>
+        </div>
+    </div>
+
+    <script src="../assets/app.js"></script>
+    <script src="../admin/announcements.js"></script>
+    <script>
+        // Initialize announcements on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('app');
+            // Since createAnnouncementsPage appends to internal elements, we call logic
+            // But we already have the HTML, let's just use the logic
+            // Actually, for simplicity, I'll let the JS populate the list
+            if (typeof createAnnouncementsPage === 'function') {
+                const list = document.getElementById('announcementsList');
+                const announcements = JSON.parse(localStorage.getItem('announcements')) || DUMMY_ANNOUNCEMENTS;
+                if (announcements.length === 0) {
+                    list.innerHTML = '<p class="no-data">No announcements yet.</p>';
+                } else {
+                    announcements.slice().reverse().forEach(announcement => {
+                        const announcementCard = document.createElement('div');
+                        announcementCard.className = `announcement-card card importance-${announcement.importance}`;
+                        announcementCard.innerHTML = `
+                            <div class="announcement-header">
+                                <h3>${announcement.title}</h3>
+                                <span class="importance-badge importance-${announcement.importance}">
+                                    ${announcement.importance.toUpperCase()}
+                                </span>
+                            </div>
+                            <p class="announcement-content">${announcement.content}</p>
+                            <div class="announcement-date">
+                                <small>📅 ${announcement.date}</small>
+                            </div>
+                        `;
+                        list.appendChild(announcementCard);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Signup - GymFit</title>
+    <link rel="stylesheet" href="../assets/global.css">
+    <link rel="stylesheet" href="../member-dashboard/member-dashboard.css">
+</head>
+<body>
+    <div id="app">
+        <div class="admin-signup-container">
+            <form class="signup-form fade-in" id="adminSignupForm">
+                <div class="login-header">
+                    <h1>💪 GymFit</h1>
+                    <p>Create Admin Account</p>
+                </div>
+
+                <div id="adminSignupAlertContainer"></div>
+
+                <div class="form-group">
+                    <label for="adminSignupName">Full Name</label>
+                    <input type="text" id="adminSignupName" name="adminSignupName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminSignupEmail">Email Address</label>
+                    <input type="email" id="adminSignupEmail" name="adminSignupEmail" placeholder="Enter your admin email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminSignupPassword">Password</label>
+                    <input type="password" id="adminSignupPassword" name="adminSignupPassword" placeholder="Create a password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminConfirmPassword">Confirm Password</label>
+                    <input type="password" id="adminConfirmPassword" name="adminConfirmPassword" placeholder="Confirm your password" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Sign Up as Admin</button>
+
+                <div class="login-footer">
+                    <p>Already have an admin account? <a href="admin-login.html">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/app.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
