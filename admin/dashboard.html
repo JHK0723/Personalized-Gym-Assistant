@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - GymFit</title>
+    <link rel="stylesheet" href="../assets/global.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">💪 GymFit</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="../workout-diet/manage-workouts.html">Workouts</a></li>
+            <li><a href="../workout-diet/manage-diet.html">Diet Plans</a></li>
+            <li><a href="announcements-admin.html">Announcements</a></li>
+        </ul>
+        <div class="user-info">
+            <span id="userNameDisplay">Admin</span>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container fade-in" id="app">
+        <div id="adminDashboardContent"></div>
+    </div>
+
+    <script src="../assets/app.js"></script>
+    <script src="admin-login.js"></script>
+</body>
+</html>
