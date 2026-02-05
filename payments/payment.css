@@ -1,0 +1,320 @@
+/* Payment & Membership Styles */
+
+.payment-container, .membership-container {
+    padding-bottom: 2rem;
+}
+
+/* Membership Plans */
+.membership-plans {
+    margin-bottom: 2rem;
+}
+
+.membership-plans h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.plans-grid {
+    margin-bottom: 2rem;
+}
+
+.plan-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 107, 53, 0.2);
+}
+
+.plan-card h3 {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.plan-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.plan-duration {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.plan-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    flex-grow: 1;
+}
+
+.plan-benefits li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.plan-benefits li:last-child {
+    border-bottom: none;
+}
+
+.plan-card .btn-block {
+    margin-top: auto;
+}
+
+/* Payment History */
+.payment-history {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-history h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.history-table thead {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.history-table th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.history-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.history-table tbody tr:hover {
+    background-color: var(--light-gray);
+}
+
+.history-table a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.history-table a:hover {
+    text-decoration: underline;
+}
+
+/* Membership Card */
+.membership-card {
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--primary-color);
+}
+
+.membership-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+
+.membership-header h2 {
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.status-active {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-expired {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.membership-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row span {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.detail-row strong {
+    color: var(--secondary-color);
+}
+
+.detail-row.highlight {
+    background-color: #fff9e6;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border-bottom: none;
+}
+
+.days-left {
+    color: var(--success-color) !important;
+    font-size: 1.1rem;
+}
+
+/* Membership Benefits */
+.membership-benefits {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.membership-benefits h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.benefit-item:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.benefit-item h4 {
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.benefit-item p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0 0;
+}
+
+/* Membership Actions */
+.membership-actions {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.membership-actions h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.action-buttons .btn {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Payment Notification */
+#paymentNotification {
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .membership-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .status-badge {
+        width: 100%;
+        text-align: center;
+    }
+
+    .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .benefits-list {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .action-buttons .btn {
+        width: 100%;
+    }
+
+    .history-table {
+        font-size: 0.9rem;
+    }
+
+    .history-table th, .history-table td {
+        padding: 0.75rem;
+    }
+}
