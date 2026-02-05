@@ -173,7 +173,7 @@ function deleteAnnouncement(id) {
     if (!confirm('Are you sure you want to delete this announcement?')) return;
 
     let announcements = JSON.parse(localStorage.getItem('announcements')) || [];
-    announcements = announcements.filter(a => a.id !== id);
+    announcements = announcements.filter(a => a.id.toString() !== id.toString());
     localStorage.setItem('announcements', JSON.stringify(announcements));
 
     alert('Announcement deleted successfully!');
