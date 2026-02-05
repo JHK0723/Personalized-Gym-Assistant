@@ -14,7 +14,16 @@
             <li><a href="dashboard.html">Dashboard</a></li>
             <li><a href="../workout-diet/manage-workouts.html">Workouts</a></li>
             <li><a href="../workout-diet/manage-diet.html">Diet Plans</a></li>
-            <li><a href="announcements-admin.html">Announcements</a></li>
+
+            <!-- ✅ ONLY FIXED LINE -->
+            <li>
+              <a href="#"
+                 onclick="window.dispatchEvent(
+                    new CustomEvent('navigate',{ detail:'announcements-admin' })
+                 ); return false;">
+                 Announcements
+              </a>
+            </li>
         </ul>
         <div class="user-info">
             <span id="userNameDisplay">Admin</span>
