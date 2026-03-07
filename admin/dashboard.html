@@ -8,25 +8,14 @@
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">💪 GymFit</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="../workout-diet/manage-workouts.html">Workouts</a></li>
-            <li><a href="../workout-diet/manage-diet.html">Diet Plans</a></li>
-            <li><a href="announcements-admin.html">Announcements</a></li>
-        </ul>
-        <div class="user-info">
-            <span id="userNameDisplay">Admin</span>
-            <button class="logout-btn" id="logoutBtn">Logout</button>
-        </div>
-    </nav>
+    <div id="react-navbar-root"></div>
 
     <div class="container fade-in" id="app">
+        <!-- Dashboard stats will stay native JS, but Announcements will be React below -->
         <div id="adminDashboardContent"></div>
+        <div id="react-announcements-root"></div>
     </div>
 
-    <script src="../assets/app.js"></script>
-    <script src="admin-login.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
