@@ -81,8 +81,7 @@ function createAdminDashboard() {
     const announcementsList = container.querySelector('#announcementsList');
     if (announcements.length === 0) {
         announcementsList.innerHTML = '<p class="no-data">No announcements yet. Create one!</p>';
-    } 
-    else {
+    } else {
         announcements.slice(-5).reverse().forEach(announcement => {
             const announcementCard = document.createElement('div');
             announcementCard.className = 'announcement-item card';
